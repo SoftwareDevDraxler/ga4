@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GA4 Test</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YDQQFN80W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8YDQQFN80W', { 'debug_mode': true });
+  </script>
+</head>
+<body>
+  <h1>GA4 Test Page</h1>
+  <button onclick="sendTestEvent()">Send Event</button>
+
+  <script>
+    function sendTestEvent() {
+      gtag('event', 'debug_event', {
+        event_category: 'manual',
+        event_label: 'button_click',
+        value: 1
+      });
+      alert("Event sent!");
+    }
+  </script>
+</body>
+</html>
